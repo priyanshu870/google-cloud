@@ -26,28 +26,28 @@ elif(add_selectbox=="Student Details"):
     new_df = pd.read_csv("Kamla Nehru Institute of Technology, Sultanpur [29 Apr].csv")
     new_df=new_df.set_index("Student Name")
     # new_df=new_df.style.hide_index()
-    new_df["Mine1"]="NO"
-    new_df["Mine2"]="NO"
-    new_df["Mine3"]="NO"
-    new_df["Mine4"]="NO"
+    new_df["Milestone1"]="NO"
+    new_df["Milestone2"]="NO"
+    new_df["Milestone3"]="NO"
+    new_df["Milestone4"]="NO"
 
     p=list(new_df["# of Quests Completed"])
     q=list(new_df["# of Skill Badges Completed"])
     for i in range(len(new_df["# of Quests Completed"])):
         if(q[i]==20 and p[i]==40 ):
-            new_df["Mine4"][i]="YES"
-            new_df["Mine3"][i]="YES"
-            new_df["Mine2"][i]="YES"
-            new_df["Mine1"][i]="YES"
+            new_df["Milestone4"][i]="YES"
+            new_df["Milestone3"][i]="YES"
+            new_df["Milestone2"][i]="YES"
+            new_df["Milestone1"][i]="YES"
         elif( p[i]>=30 and q[i]>=15 ):
-            new_df["Mine3"][i]="YES"
-            new_df["Mine2"][i]="YES"
-            new_df["Mine1"][i]="YES"
+            new_df["Milestone3"][i]="YES"
+            new_df["Milestone2"][i]="YES"
+            new_df["Milestone1"][i]="YES"
         elif( p[i]>=20 and q[i]>=10 ):
-            new_df["Mine2"][i]="YES"
-            new_df["Mine1"][i]="YES"
+            new_df["Milestone2"][i]="YES"
+            new_df["Milestone1"][i]="YES"
         elif(p[i]>=10 and q[i]>=5):
-            new_df["Mine1"][i]="YES"
+            new_df["Milestone1"][i]="YES"
     
     
 
